@@ -22,7 +22,7 @@ New Vue({
   
 //Vue组件不仅能组合html标签 每一个Vue组件对相当于一个Vue实例 在组件内可定义 方法 数据 以及 引用其他组件  
 //例如 定义一个名为 button-rounter 的组件 定义数据count 值为0 定义点击自增方法clickAdd  
-Vue.component('button-rounter',{
+Vue.component('button-rounter',{  
   data:function(){  
     return{  
       count:0  

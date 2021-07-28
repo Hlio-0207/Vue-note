@@ -21,3 +21,29 @@ New Vue({
 </div>  
   
 //Vue组件不仅能组合html标签 每一个Vue组件对相当于一个Vue实例 在组件内可定义 方法 数据 以及 引用其他组件  
+//例如 定义一个名为 button-rounter 的组件 定义数据count 值为0 定义点击自增方法clickAdd  
+Vue.component('button-rounter',{
+  data:function(){  
+    return{  
+      count:0  
+    }  
+   },  
+  methods:{  
+     clickAdd:function(){  
+      this.count++
+     }  
+    },  
+  template:'<button @click="clickAdd">You clicked me {{ count }} times</button>'  
+})  
+
+//注意 一个组件的data选项必须是一个函数 因此每个实例可以维护一份被返回的对象的独立copy  
+data:function(){  
+  return{  
+    count:0  
+  }  
+  }  
+ //而不是像定义Vue实例一样
+ data:{  
+  count:0  
+  }  
+  
